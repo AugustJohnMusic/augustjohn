@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Brush Script MT', cursive;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ffffff;
+    color: #000000;
+}
+
+#header {
+    width: 100%;
+    height: 130vh;
+    background-image: url(images/audience1.PNG); /* Choose background image from files */
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    flex-direction: column; /* Align links vertically */
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    height: 100vh; /* Make nav fill entire height */
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack the list items vertically */
+    align-items: center; /* Center the list items */
+}
+
+nav ul li {
+    list-style: none;
+    margin: 20px 0; /* Vertical spacing between items */
+}
+
+/* Default link styles */
+nav ul li a {
+    color: #f59b9b;
+    text-decoration: none;
+    font-size: 44px; /* Larger font for desktops */
+    transition: all 0.2s ease; /* Smooth transition for changes */
+    display: inline-block; /* Required to apply transform */
+    transform-origin: center center; /* Set transform point to center */
+}
+
+nav ul li a:hover {
+    background-color: pink;
+}
+
+/* Custom styles for each individual link with different angles */
+#link1 {
+    transform: rotate(10deg); /* Angle link1 */
+    position: relative;
+    right: 50px; /* Move link1 to the left */
+    top: 80px;    /* Move link1 down by 20px */
+}
+
+#link2 {
+    transform: rotate(-14deg); /* Angle link2 */
+    position: relative;
+    left: 50px; /* Move link2 to the right */
+    top: 30px;    /* Move link1 down by 20px */
+}
+
+#link3 {
+    transform: rotate(12deg); /* Angle link3 */
+    position: relative;
+    right: 50px; /* Move link1 to the left */
+    top: 25px;    /* Move link1 down by 20px */
+}
+
+#link4 {
+    transform: rotate(-9deg); /* Angle link4 */
+    position: relative;
+    left: 40px; /* Move link2 to the right */
+}
+
+#link5 {
+    transform: rotate(10deg); /* Angle link5 */
+    position: relative;
+    right: 30px; /* Move link5 to the left */
+}
+
+#link6 {
+    transform: rotate(-11deg); /* Angle link6 */
+    position: relative;
+    left: 30px; /* Move link2 to the right */
+}
+
+#link7 {
+    transform: rotate(10deg); /* Angle link7 */
+    position: relative;
+    right: 25px; /* Move link7 to the right */
+}
+
+/* Hover effect */
+nav ul li a:hover {
+    background-color: rgb(254, 134, 154);
+}
+
+.my-text {
+    position: absolute;       /* Remove from normal flow */
+    bottom: 0px;              /* 50% down from its containing block (header .container) */
+    left: 300px;              /* 50% across */
+    transform: translate(-50%, -50%); /* Shift back by half its own width/height → perfect center */
+    font-size: 32px;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+/* Ensuring no horizontal scrollbar shows */
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Gallery wrapper */
+.gallery .grid {
+    display: block; /* Each img on its own line */
+    width: 100vw;   /* Match viewport width exactly */
+}
+
+/* Full-width, aspect-ratio-preserving images */
+.gallery .grid img {
+    width: 100vw;        /* Span full viewport width */
+    height: auto;        /* Adjust height to maintain aspect ratio */
+    display: block;      /* Remove inline-image gap */
+    margin-bottom: 0%;   /* Space between images */
+    object-fit: contain; /* Ensure no cropping—shows full image */
+    background-color: #ffffff; /* Yellow behind any letter-boxed areas */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For devices with width 1024px or less (tablets) */
+@media (max-width: 1024px) {
+    nav ul li a {
+        font-size: 36px; /* Adjust font size for tablets */
+    }
+
+    .my-text {
+        font-size: 24px; /* Adjust text size for 'booking' info on tablets */
+        left: 50%; /* Center horizontally */
+        bottom: 10px; /* Adjust vertical position */
+    }
+}
+
+/* For devices with width 768px or less (smartphones and smaller tablets) */
+@media (max-width: 768px) {
+    nav ul li a {
+        font-size: 28px; /* Smaller font size for phones */
+    }
+
+    .my-text {
+        font-size: 20px; /* Adjust 'booking' text for mobile */
+        left: 50%; /* Center horizontally */
+        bottom: 20px; /* Adjust vertical position */
+    }
+
+    #header {
+        height: 100vh;
+        background-position: top center;
+    }
+
+    nav {
+        flex-direction: column; /* Stack links vertically on mobile */
+        justify-content: flex-start;
+        padding-top: 50px; /* Add spacing at the top for mobile */
+        height: auto; /* Allow nav height to be flexible */
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* For devices with width 480px or less (small smartphones) */
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 22px; /* Further reduce font size for very small screens */
+    }
+
+    .my-text {
+        font-size: 18px; /* Further reduce 'booking' text size */
+    }
+}
