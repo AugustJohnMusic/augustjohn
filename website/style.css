@@ -13,7 +13,7 @@ body {
 #header {
     width: 100%;
     height: 130vh;
-    background-image: url(images/audience1.jpg); /* Choose background image from files */
+    background-image: url(../images/audience1.jpg); /* Choose background image from files */
     background-size: cover;
     background-position: center;
 }
